@@ -6,9 +6,8 @@ body {
 .gridForCharacter {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(10, 500px);
-  grid-gap: 70px;
-  margin: 100px;
+  grid-template-rows: repeat(10, 550px);
+  grid-gap: 40px;
 }
 
 .characterCard {
@@ -16,7 +15,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: goldenrod;
-  padding: 70px;
+  padding: 100px;
   border-radius: 300px;
   border: solid 30px rgb(39, 85, 130);
 }
@@ -25,7 +24,6 @@ body {
   font-size: 35px;
   color: white;
   text-shadow: 5px 5px 2px black;
-  /* margin-right: 30px; */
 }
 
 .quote {

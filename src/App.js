@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import "./App.css";
 import AllCharacter from "./components/AllCharacter";
-import TitleBar from "./components/TitleBar";
+// import TitleBar from "./components/TitleBar";
 
 class App extends Component {
   state = { simpsons: [] };
@@ -24,7 +24,7 @@ class App extends Component {
 
     return (
       <>
-        <TitleBar />
+        {/* <TitleBar /> */}
         <AllCharacter simpsons={simpsons} />;
       </>
     );
