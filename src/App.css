@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
+body {
+  font-family: "Luckiest Guy", cursive;
+  background-color: rgb(66, 141, 214);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.gridForCharacter {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(10, 500px);
+  grid-gap: 70px;
+  margin: 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.characterCard {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background-color: goldenrod;
+  padding: 70px;
+  border-radius: 300px;
+  border: solid 30px rgb(39, 85, 130);
+}
+
+.character {
+  font-size: 35px;
   color: white;
+  text-shadow: 5px 5px 2px black;
+  /* margin-right: 30px; */
 }
 
-.App-link {
-  color: #61dafb;
+.quote {
+  font-size: 20px;
+  color: white;
+  margin-left: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+img {
+  width: 200px;
+}
+
+img:hover {
+  transition: transform 500ms;
+  scale: 1.1;
+}
+
+.imageButton {
+  border: none;
+  background-color: goldenrod;
+}
+
+.Right {
+  order: 1;
+}
+
+.likes {
+  order: 2;
+  margin-left: 12px;
+  font-size: 20px;
+  background-color: rgb(39, 85, 130);
+  padding-left: 12px;
+  padding-right: 12px;
+  color: white;
+  /* text-shadow: 5px 5px 2px black; */
+}
+
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #fff;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
   }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
+/* title bar */
+.title {
+  font-size: 30px;
+  color: white;
 }

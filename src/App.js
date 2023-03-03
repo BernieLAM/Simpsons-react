@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Character from "./components/character";
+import "./App.css";
+import AllCharacter from "./components/AllCharacter";
+import TitleBar from "./components/TitleBar";
 
 class App extends Component {
   state = { simpsons: [] };
@@ -14,20 +16,16 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.simpsons);
     const { simpsons } = this.state;
 
-    //if data is here, loop over the data
-    //think defensive check
     if (!simpsons) {
-      return <h1>Waiting for data....</h1>;
+      return <div className="lds-ripple"></div>;
     }
 
     return (
       <>
-        {simpsons.map((index) => (
-          <Character index={simpsons} />
-        ))}
+        <TitleBar />
+        <AllCharacter simpsons={simpsons} />;
       </>
     );
   }
