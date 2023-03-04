@@ -1,13 +1,15 @@
 body {
   font-family: "Luckiest Guy", cursive;
   background-color: rgb(66, 141, 214);
+  display: flex;
+  justify-content: center;
 }
 
 .gridForCharacter {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(10, 550px);
-  grid-gap: 40px;
+  grid-template-rows: repeat(10, 520px);
+  grid-gap: 25px;
 }
 
 .characterCard {
@@ -15,29 +17,29 @@ body {
   justify-content: center;
   align-items: center;
   background-color: goldenrod;
-  padding: 100px;
+  width: 600px;
+  padding: 92px;
   border-radius: 300px;
-  border: solid 30px rgb(39, 85, 130);
+  border: solid 25px rgb(39, 85, 130);
 }
 
 .character {
-  font-size: 35px;
+  font-size: 27px;
   color: white;
   text-shadow: 5px 5px 2px black;
 }
 
 .quote {
-  font-size: 20px;
+  font-size: 18px;
   color: white;
   margin-left: 30px;
 }
 
 img {
-  width: 200px;
+  width: 170px;
 }
 
 img:hover {
-  transition: transform 500ms;
   scale: 1.1;
 }
 
@@ -58,7 +60,21 @@ img:hover {
   padding-left: 12px;
   padding-right: 12px;
   color: white;
-  /* text-shadow: 5px 5px 2px black; */
+  border-radius: 50px;
+}
+
+.deleteButton {
+  border: none;
+  background-color: goldenrod;
+  margin-right: 20px;
+}
+
+i {
+  scale: 1.5;
+}
+
+i:hover {
+  scale: 2;
 }
 
 .lds-ripple {
@@ -112,4 +128,7 @@ img:hover {
 .title {
   font-size: 30px;
   color: white;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(39, 85, 130);
 }

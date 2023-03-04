@@ -1,31 +1,17 @@
 import React, { Component } from "react";
-import axios from "axios";
 import "./App.css";
-import AllCharacter from "./components/AllCharacter";
+
+import CharacterCards from "./components/CharacterCards";
+import TitleBar from "./components/TitleBar";
 // import TitleBar from "./components/TitleBar";
 
 class App extends Component {
-  state = { simpsons: [] };
-
-  async componentDidMount() {
-    const results = await axios.get(
-      `https://thesimpsonsquoteapi.glitch.me/quotes?count=20`
-    );
-
-    this.setState({ simpsons: results.data });
-  }
-
+  state = {};
   render() {
-    const { simpsons } = this.state;
-
-    if (!simpsons) {
-      return <div className="lds-ripple"></div>;
-    }
-
     return (
       <>
-        {/* <TitleBar /> */}
-        <AllCharacter simpsons={simpsons} />;
+        <TitleBar />
+        <CharacterCards />;
       </>
     );
   }
