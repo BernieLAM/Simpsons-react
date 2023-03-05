@@ -5,6 +5,11 @@ body {
   justify-content: center;
 }
 
+.menuBar {
+  display: flex;
+  justify-content: center;
+}
+
 .gridForCharacter {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
