@@ -49,9 +49,13 @@ class CharacterCards extends Component {
     const userInput = e.target.value;
 
     const filtered = simpsons.filter((simpsons) => {
-      return simpsons.character.toLowerCase().includes(userInput);
+      return (
+        simpsons.character.toLowerCase().includes(userInput) ||
+        simpsons.character.toUpperCase().includes(userInput)
+      );
     });
     this.setState({ simpsons: filtered });
+    console.log(filtered);
     // console.log(filtered);
   };
 
@@ -76,17 +80,21 @@ class CharacterCards extends Component {
           <div className="title">
             <h1>The Simpsons Quote</h1>
           </div>
-          <div>
-            <button onClick={this.onSortAtoZ}>Sort by A-Z</button>
+          <div className="onInput">
+            <input
+              onInput={this.onInput}
+              type="text"
+              placeholder="Search by name"
+            ></input>
           </div>
-          <div>
-            <button onClick={this.onSortZtoA}>Sort by Z-A</button>
-          </div>
-          <div>
+          <div className="menuButton newQuote">
             <button onClick={this.newQuote}>New Quote</button>
           </div>
-          <div>
-            <input onInput={this.onInput} type="text"></input>
+          <div className="menuButton onSortAtoZ">
+            <button onClick={this.onSortAtoZ}>Sort by A-Z</button>
+          </div>
+          <div className="menuButton onSortZtoA">
+            <button onClick={this.onSortZtoA}>Sort by Z-A</button>
           </div>
         </div>
 

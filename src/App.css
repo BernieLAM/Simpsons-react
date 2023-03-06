@@ -5,11 +5,6 @@ body {
   justify-content: center;
 }
 
-.menuBar {
-  display: flex;
-  justify-content: center;
-}
-
 .gridForCharacter {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -22,7 +17,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: goldenrod;
-  width: 600px;
+  width: 580px;
   padding: 92px;
   border-radius: 300px;
   border: solid 25px rgb(39, 85, 130);
@@ -37,7 +32,7 @@ body {
 .quote {
   font-size: 18px;
   color: white;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 img {
@@ -46,6 +41,7 @@ img {
 
 img:hover {
   scale: 1.1;
+  cursor: pointer;
 }
 
 .imageButton {
@@ -59,8 +55,8 @@ img:hover {
 
 .likes {
   order: 2;
-  margin-left: 12px;
-  font-size: 20px;
+  margin-left: 10px;
+  font-size: 17px;
   background-color: rgb(39, 85, 130);
   padding-left: 12px;
   padding-right: 12px;
@@ -133,7 +129,32 @@ i:hover {
 .title {
   font-size: 30px;
   color: white;
+  text-shadow: 10px 10px rgb(39, 85, 130);
+}
+
+.menuBar {
   display: flex;
-  justify-content: center;
-  background-color: rgb(39, 85, 130);
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.menuButton > button {
+  border-style: none;
+  background-color: rgb(66, 141, 214);
+  color: white;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+button:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+
+.onInput > input {
+  height: 25px;
+  width: 180px;
+  border: solid 2px rgb(39, 85, 130);
 }
