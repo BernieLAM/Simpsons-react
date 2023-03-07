@@ -10,26 +10,27 @@ class App extends Component {
     const index = this.state.simpsons.findIndex(
       (simpsons) => simpsons.quote === quote
     ); //----- use something unique to findIndex to tell computer which one you click
-    console.log(quote);
-    console.log(index);
 
     const simpsons = [...this.state.simpsons];
     simpsons[index].like = true;
 
     this.setState({ simpsons });
-    console.log(simpsons);
   };
 
   onDelete = (quote) => {
+    console.log(quote);
     const index = this.state.simpsons.findIndex(
       (simpsons) => simpsons.quote === quote
     ); //----- delete function must exist where the state is, because the delete function changes the state
     //----- use something unique to findIndex to tell computer which one you delete
-
+    console.log(index);
     const simpsons = [...this.state.simpsons];
+    console.log(simpsons);
+
     //----- always use copy to manipulate things, won't mess up the orginal one
     //----- because of scope, here can use simspons as well, better than simpsonsCopy
     simpsons.splice(index, 1); //----- here using copy one to splice one
+    console.log(simpsons);
     this.setState({ simpsons }); //----- send back to state
   };
 
@@ -69,7 +70,7 @@ class App extends Component {
 
   async componentDidMount() {
     const results = await axios.get(
-      `https://thesimpsonsquoteapi.glitch.me/quotes?count=40`
+      `https://thesimpsonsquoteapi.glitch.me/quotes?count=15`
     );
 
     this.setState({ simpsons: results.data });

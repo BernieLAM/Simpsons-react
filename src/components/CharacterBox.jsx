@@ -9,7 +9,7 @@ class CharacterBox extends Component {
     return (
       <>
         {filtered.map((item) => (
-          <div className="characterCard">
+          <div className="characterCard" key={item.quote}>
             <div>
               <button
                 className="deleteButton"
@@ -44,3 +44,6 @@ class CharacterBox extends Component {
 }
 
 export default CharacterBox;
+
+//----- note!
+//----- line 12, the key is very important, it causes the delete button not working. Correct the error in console first, it might fix the bug.
