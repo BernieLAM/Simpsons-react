@@ -2,11 +2,10 @@ import React, { Component } from "react";
 
 class LikesImage extends Component {
   state = { like: 0 };
+  onLike = () => {
+    this.setState({ like: this.state.like + 1 });
+  };
   render() {
-    const onLike = () => {
-      this.setState({ like: this.state.like + 1 });
-    };
-
     return (
       <>
         <div className="likes">
@@ -17,7 +16,10 @@ class LikesImage extends Component {
             <img
               src={this.props.image}
               alt={this.props.character}
-              onClick={onLike}
+              onClick={() => {
+                this.props.onLike(this.props.quote);
+                this.onLike();
+              }}
             ></img>
           </button>
         </div>
