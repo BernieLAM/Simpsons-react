@@ -70,7 +70,7 @@ class App extends Component {
 
   async componentDidMount() {
     const results = await axios.get(
-      `https://thesimpsonsquoteapi.glitch.me/quotes?count=15`
+      `https://thesimpsonsquoteapi.glitch.me/quotes?count=14`
     );
 
     this.setState({ simpsons: results.data });

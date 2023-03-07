@@ -8,8 +8,8 @@ body {
 .gridForCharacter {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(10, 520px);
-  grid-gap: 25px;
+  grid-template-rows: repeat(auto, 520px);
+  grid-gap: 20px;
 }
 
 .characterCard {
@@ -17,26 +17,26 @@ body {
   justify-content: center;
   align-items: center;
   background-color: goldenrod;
-  width: 580px;
+  width: 520px;
   padding: 92px;
   border-radius: 300px;
-  border: solid 25px rgb(39, 85, 130);
+  border: solid 20px rgb(39, 85, 130);
 }
 
 .character {
-  font-size: 27px;
+  font-size: 25px;
   color: white;
   text-shadow: 5px 5px 2px black;
 }
 
 .quote {
-  font-size: 18px;
+  font-size: 16px;
   color: white;
   margin-left: 20px;
 }
 
 img {
-  width: 170px;
+  width: 160px;
 }
 
 img:hover {
